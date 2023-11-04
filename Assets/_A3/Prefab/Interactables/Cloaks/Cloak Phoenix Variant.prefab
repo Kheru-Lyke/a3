@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3167728066766999125
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3589399303258203884, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3915094
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399303258203884, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3915094
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399303258203884, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399304609622717, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: cloak
+      value: 
+      objectReference: {fileID: 622383686838592522}
+    - target: {fileID: 3589399304609622718, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_Name
+      value: Cloak Phoenix Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+--- !u!4 &1884224567533429994 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+  m_PrefabInstance: {fileID: 3167728066766999125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4027700656638272416
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1884224567533429994}
+    m_Modifications:
+    - target: {fileID: 4552972643158175024, guid: 2b46abeeb4770f9498f21f3c13fe8840, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552972643158175024, guid: 2b46abeeb4770f9498f21f3c13fe8840, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552972643158175024, guid: 2b46abeeb4770f9498f21f3c13fe8840, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552972643158175024, guid: 2b46abeeb4770f9498f21f3c13fe8840, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552972643158175024, guid: 2b46abeeb4770f9498f21f3c13fe8840, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552972643158175024, guid: 2b46abeeb4770f9498f21f3c13fe8840, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552972643158175024, guid: 2b46abeeb4770f9498f21f3c13fe8840, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552972643158175024, guid: 2b46abeeb4770f9498f21f3c13fe8840, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552972643158175024, guid: 2b46abeeb4770f9498f21f3c13fe8840, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552972643158175025, guid: 2b46abeeb4770f9498f21f3c13fe8840, type: 3}
+      propertyPath: m_Name
+      value: PhoenixFlame
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2b46abeeb4770f9498f21f3c13fe8840, type: 3}
+--- !u!114 &622383686838592522 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4559440259138127786, guid: 2b46abeeb4770f9498f21f3c13fe8840, type: 3}
+  m_PrefabInstance: {fileID: 4027700656638272416}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95aaf6076af7fa54a9a2865434327aad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
