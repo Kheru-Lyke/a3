@@ -13,6 +13,7 @@ public class Player : Damageable {
 	private Cloak cloak = null;
 	private List<Cloak> assimilatedCloaks = new List<Cloak>();
 	public bool HasCloak => cloak != null;
+	public CloakType CloakType => cloak.Type;
 
 	private bool isGrounded = false;
 	public bool IsGrounded => isGrounded;

@@ -29,6 +29,7 @@ namespace Com.KheruSEmporium.A3
         }
 
         protected virtual void Die() {
+            velocity = Vector2.zero;
 			OnDeath?.Invoke();
 
             Destroy(gameObject);

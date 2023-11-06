@@ -22,7 +22,7 @@ PrefabInstance:
     - target: {fileID: 3589399304609622717, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
       propertyPath: cloak
       value: 
-      objectReference: {fileID: 557429545201918990}
+      objectReference: {fileID: 0}
     - target: {fileID: 3589399304609622718, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
       propertyPath: m_Name
       value: Cloak Stag Variant
@@ -71,23 +71,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5020026819069411870, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: cloak
+      value: 
+      objectReference: {fileID: 2608907051740373548}
+    - target: {fileID: 6237463950743145735, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+      propertyPath: m_Name
+      value: Cloak Stag Variant
+      objectReference: {fileID: 0}
     - target: {fileID: 7788511571786910960, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
---- !u!4 &1258321438092510113 stripped
+--- !u!4 &8514481029024621592 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3589399304609622719, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6237463950743145734, guid: 110221ee2ff534a42a600b96249bac5e, type: 3}
   m_PrefabInstance: {fileID: 2352689936413042974}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &7805518846261952661
+--- !u!1001 &5753935778549974711
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1258321438092510113}
+    m_TransformParent: {fileID: 8514481029024621592}
     m_Modifications:
     - target: {fileID: 7777335295613002904, guid: 65a4e12ac6786944abb49fc4d0b641d3, type: 3}
       propertyPath: m_RootOrder
@@ -139,10 +147,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a4e12ac6786944abb49fc4d0b641d3, type: 3}
---- !u!114 &557429545201918990 stripped
+--- !u!114 &2608907051740373548 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7777335295613002907, guid: 65a4e12ac6786944abb49fc4d0b641d3, type: 3}
-  m_PrefabInstance: {fileID: 7805518846261952661}
+  m_PrefabInstance: {fileID: 5753935778549974711}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1

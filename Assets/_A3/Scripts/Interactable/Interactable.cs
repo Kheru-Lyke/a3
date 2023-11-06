@@ -32,7 +32,7 @@ namespace Com.KheruSEmporium.A3.A3.Interactable {
 			player.OnPlayerInteract-= OnPlayerInteract;
 		}
 
-		protected void ShowCanInteract(bool canInteract) {
+		protected virtual void ShowCanInteract(bool canInteract) {
 			animator.SetBool("PlayerInRange", canInteract);
 		}
 	}
