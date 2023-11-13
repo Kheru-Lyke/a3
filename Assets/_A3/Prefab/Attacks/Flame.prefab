@@ -71,11 +71,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d237769609022e747b93463f68267d4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLifetime: 1
+  dieTime: 0.3
   speed: 10
   direction: {x: 1, y: 0, z: 0}
   damage: 1
-  maxLifetime: 1
-  dieTime: 0.3
 --- !u!1 &1787890718677802266
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,8 +147,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 1, g: 0.54881847, b: 0.11792451, a: 1}
+  m_Sprite: {fileID: -9095717837082945937, guid: 614844dc4d5ab28419bf2c076a1f5ece, type: 3}
+  m_Color: {r: 1, g: 0.48888892, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
