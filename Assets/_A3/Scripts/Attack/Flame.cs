@@ -16,7 +16,7 @@ namespace Com.KheruSEmporium.A3 {
 
 
 		private void Update() {
-			transform.position += direction * (speed * Time.deltaTime);
+			transform.position += direction.normalized * (speed * Time.deltaTime);
 		}
 
 		public void SetDirection(Vector3 direction) {

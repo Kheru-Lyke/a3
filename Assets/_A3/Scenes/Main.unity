@@ -506,6 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+  isInvincible: 0
 --- !u!212 &132602479
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -567,7 +568,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3133,6 +3134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  isInvincible: 0
   settings: {fileID: 11400000, guid: 1bfecf74f2556884186c2be207363307, type: 2}
   visual: {fileID: 570080307}
 --- !u!114 &1440425481

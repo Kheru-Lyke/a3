@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace Com.KheruSEmporium.A3 {
 	public class BeetleShield : Cloak {
-		[SerializeField] private GameObject shield = null;
+		[SerializeField] private float invincibleTime = 0.5f;
 
 		public override void OnBeetle() {
-			Instantiate(shield, player.transform);
+			player.SetInvincible(invincibleTime);
 
 			StartCountdown();
 		}

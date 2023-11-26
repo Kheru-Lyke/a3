@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ namespace Com.KheruSEmporium.A3
     public class Damageable : Moving
     {
         [SerializeField] private float maxHealth = 10;
+        [SerializeField] private bool isInvincible = false;
         private float health;
         public event Action OnDeath;
 
@@ -24,8 +26,15 @@ namespace Com.KheruSEmporium.A3
             }
         }
 
+        public virtual void SetInvincible(float timeBeforeFalse = -1) {
+            isInvincible = true;
+
+            if (timeBeforeFalse > 0)
+            DOTween.Sequence().AppendInterval(timeBeforeFalse).AppendCallback(delegate () { isInvincible = false; });
+        }
+
         public virtual void ChangeHealthBy(float value) {
-            Health -= value;
+            if (!isInvincible) Health -= value;
         }
 
         protected virtual void Die() {

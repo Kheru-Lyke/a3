@@ -28,6 +28,8 @@ namespace Com.KheruSEmporium.A3.A3.Interactable {
 		}
 
 		protected void OnTriggerExit2D(Collider2D collision) {
+			if (!player) return;
+
 			ShowCanInteract(false);
 			player.OnPlayerInteract-= OnPlayerInteract;
 		}

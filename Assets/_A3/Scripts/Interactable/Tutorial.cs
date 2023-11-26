@@ -7,6 +7,7 @@ namespace Com.KheruSEmporium.A3 {
 		[SerializeField] private Sprite_ButtonLoc button;
 
 		protected override void ShowCanInteract(bool canInteract) {
+			if (!player) return;
 			if (!player.HasCloak) return;
 
 			base.ShowCanInteract(canInteract);
