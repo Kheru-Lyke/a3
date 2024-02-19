@@ -11,7 +11,7 @@ namespace Com.KheruSEmporium.A3.A3.Interactable {
 		protected Animator animator;
 		protected Player player;
 
-		private void Start() {
+		protected virtual void Start() {
 			animator = GetComponent<Animator>();
 		}
 

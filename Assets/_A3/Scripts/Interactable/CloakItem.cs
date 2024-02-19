@@ -8,14 +8,19 @@ namespace Com.KheruSEmporium.A3.A3.Interactable {
     {
 		[SerializeField] protected Cloak cloak = null;
 
+		protected override void Start() {
+			if (cloak == null) gameObject.SetActive(false);
+			base.Start();
+		}
+
 		protected override void OnPlayerInteract() {
+			
 			if (player.HasCloak) {
 				animator.SetTrigger("Cant");
 				return;
 			}
 
 			player.SetCloak(cloak);
-			gameObject.SetActive(false);
 		}
 	}
 }

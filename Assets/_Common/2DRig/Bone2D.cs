@@ -12,7 +12,7 @@ namespace Com.KheruSEmporium.A3.Common.DRig {
 			Gizmos.DrawLine(transform.position + transform.right * boneWidth, transform.parent.position);
 			Gizmos.DrawLine(transform.position + transform.right * -boneWidth, transform.parent.position);
 
-			Gizmos.DrawIcon(transform.position, "Bone.jpg", false);
+			Gizmos.DrawSphere(transform.position, boneWidth * 2);
 		}
 	}
 }

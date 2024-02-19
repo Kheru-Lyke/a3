@@ -9,14 +9,13 @@ using UnityEngine.InputSystem;
 public class Player : Damageable {
 	[SerializeField] private PlayerSettings settings = null;
 	[SerializeField] private PlayerVisual visual = null;
+	[SerializeField] private Animator animator = null;
 	
 	private Cloak cloak = null;
 	private List<Cloak> assimilatedCloaks = new List<Cloak>();
 	public bool HasCloak => cloak != null;
 	public CloakType CloakType => cloak.Type;
 
-	private bool isGrounded = false;
-	public bool IsGrounded => isGrounded;
 
 	public event Action OnPlayerInteract;
 
@@ -61,9 +60,6 @@ public class Player : Damageable {
 
 	protected void FixedUpdate() {
 		Move();
-
-		Transform hit = Physics2D.Raycast(transform.position, Vector2.down, 0.7f, ~(1 << 3)).transform;
-		isGrounded = hit;
 	}
 
 	/// <summary>
@@ -71,6 +67,9 @@ public class Player : Damageable {
 	/// </summary>
 	protected override void Move() {
 		velocity.y = rigidBody.velocity.y;
+
+		animator.SetFloat("Speed", Mathf.Abs(velocity.x));
+		if (velocity.x != 0) transform.localScale = new Vector3(velocity.x > 0 ? 1 : -1, 1, 1);
 		base.Move();
 	}
 

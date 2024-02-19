@@ -17,6 +17,9 @@ namespace Com.KheruSEmporium.A3
 		public Vector3 HorizontalFacing => horizontalFacingDirection;
 
 		public Rigidbody2D Rigidbody => rigidBody;
+		[SerializeField] private float checkGroundDistance;
+		private bool isGrounded = false;
+		public bool IsGrounded => isGrounded;
 
 		protected virtual void Move() {
 			rigidBody.velocity = velocity;
@@ -30,8 +33,9 @@ namespace Com.KheruSEmporium.A3
 				}
 			}
 
-			Debug.DrawRay(transform.position, facingDirection, Color.blue);
-			Debug.DrawRay(transform.position, horizontalFacingDirection, Color.cyan);
+			Debug.DrawRay(transform.position, Vector2.down * checkGroundDistance, Color.red);
+			Transform hit = Physics2D.Raycast(transform.position, Vector2.down, checkGroundDistance, ~(1 << 3)).transform;
+			isGrounded = hit;
 		}
 	}
 }
