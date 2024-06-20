@@ -29,7 +29,7 @@ namespace Com.KheruSEmporium.A3 {
 				reactor.onDoneReacting += Reactor_onDoneReacting;
 			}
 
-			SetInteractable(isInteractable);
+			visual.material = isInteractable ? availableMaterial : lockedMaterial;
 		}
 
 		public void SetInteractable(bool value) {
@@ -37,7 +37,7 @@ namespace Com.KheruSEmporium.A3 {
 
 			//Temporary
 			visual.material = isInteractable? availableMaterial: lockedMaterial;
-			animator.SetBool("PlayerInRange", isInteractable);
+			if (playerInRange) animator.SetBool("PlayerInRange", isInteractable);
 		}
 
 		private void Reactor_onDoneReacting() {

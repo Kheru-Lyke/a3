@@ -95,8 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInteractable: 1
-  linkedObjects:
-  - {fileID: 0}
+  linkedObjects: []
   visual: {fileID: 906725834}
   lockedMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   availableMaterial: {fileID: 2100000, guid: 857076799be152e44a2f3480ba77b61c, type: 2}
@@ -197,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Anchor
       objectReference: {fileID: 0}
+    - target: {fileID: 3117864795755145627, guid: e765cfeb265336646b75690af461972e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: a8fd098f5f5bf0e4dbeca893eb9dc3bb, type: 2}
     m_RemovedComponents:
     - {fileID: 3117864795755145626, guid: e765cfeb265336646b75690af461972e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e765cfeb265336646b75690af461972e, type: 3}
