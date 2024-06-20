@@ -1,4 +1,4 @@
-using Com.KheruSEmporium.A3.A3.Interactable;
+using Com.KheruSEmporium.A3;
 
 namespace Com.KheruSEmporium.A3 {
 	public class DiscardCloak : Interactable {

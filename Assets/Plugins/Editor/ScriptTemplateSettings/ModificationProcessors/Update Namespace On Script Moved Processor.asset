@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isActive: 1
   _order: 0
-  namespaceKeyword: {fileID: 114364570387524256, guid: f273121041a24614383c85927c8621a2,
-    type: 2}
+  namespaceKeyword: {fileID: 114380126654612652, guid: f273121041a24614383c85927c8621a2, type: 2}

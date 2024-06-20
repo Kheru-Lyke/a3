@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Com.KheruSEmporium.A3.A3.Interactable {
+namespace Com.KheruSEmporium.A3 {
 
 	[RequireComponent(typeof(Collider2D), typeof(Animator))]
 	public class Interactable : MonoBehaviour
@@ -24,6 +24,10 @@ namespace Com.KheruSEmporium.A3.A3.Interactable {
 		}
 
 		protected virtual void OnPlayerInteract() {
+			CantInteract();
+		}
+
+		protected void CantInteract() {
 			animator.SetTrigger("Cant");
 		}
 

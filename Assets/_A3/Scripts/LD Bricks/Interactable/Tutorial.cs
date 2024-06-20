@@ -1,5 +1,4 @@
-using Com.KheruSEmporium.A3.A3.Cloaks;
-using Com.KheruSEmporium.A3.A3.Interactable;
+using Com.KheruSEmporium.A3;
 using UnityEngine;
 
 namespace Com.KheruSEmporium.A3 {

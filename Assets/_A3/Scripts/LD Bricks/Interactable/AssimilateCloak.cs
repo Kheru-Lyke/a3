@@ -1,10 +1,9 @@
-using Com.KheruSEmporium.A3.A3.Interactable;
+using Com.KheruSEmporium.A3;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Com.KheruSEmporium.A3
-{
+namespace Com.KheruSEmporium.A3 {
     public class AssimilateCloak : Interactable
     {
 		protected override void OnPlayerInteract() {

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Com.KheruSEmporium.A3.A3.Interactable {
+namespace Com.KheruSEmporium.A3 {
     public class CloakItem : Interactable
     {
 		[SerializeField] protected Cloak cloak = null;

@@ -1,8 +1,7 @@
 using Com.KheruSEmporium.A3.A3.Cloaks;
 using UnityEngine;
 
-namespace Com.KheruSEmporium.A3
-{
+namespace Com.KheruSEmporium.A3.A3.Cloaks {
     public class PhoenixFlame : Cloak
     {
 		[SerializeField] private GameObject flameAttack = null;
