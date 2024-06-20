@@ -28,6 +28,19 @@ namespace Com.KheruSEmporium.A3
 			rb = GetComponent<Rigidbody2D>();
 		}
 
+		private void OnDrawGizmos() {
+			Gizmos.color = Color.green;
+
+			foreach (Transform point in pathPoints) {
+				Gizmos.DrawWireSphere(point.position, 0.2f);
+				Gizmos.DrawIcon(point.position, "bone", true);
+			}
+
+			for (int i = 0; i < pathPoints.Count - 1; i++) {
+				Gizmos.DrawLine(pathPoints[i].position, pathPoints[i + 1].position);
+			}
+		}
+
 		public void React() {
 			if (pathPoints.Count <= 1) {
 				onDoneReacting?.Invoke();

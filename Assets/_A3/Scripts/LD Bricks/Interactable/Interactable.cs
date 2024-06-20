@@ -10,6 +10,7 @@ namespace Com.KheruSEmporium.A3 {
     {
 		protected Animator animator;
 		protected Player player;
+		protected bool playerInRange = false;
 
 		protected virtual void Start() {
 			animator = GetComponent<Animator>();
@@ -21,6 +22,8 @@ namespace Com.KheruSEmporium.A3 {
 				ShowCanInteract(true);
 				player.OnPlayerInteract += OnPlayerInteract;
 			}
+
+			playerInRange = player;
 		}
 
 		protected virtual void OnPlayerInteract() {
