@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95aaf6076af7fa54a9a2865434327aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownInS: 0.5
+  cooldownInS: 0.2
   type: 2
   visual: {fileID: 4552972644057289928}
   flameAttack: {fileID: 1787890717449869438, guid: aff415afb3c8e6f4894c9991a918f0b3, type: 3}

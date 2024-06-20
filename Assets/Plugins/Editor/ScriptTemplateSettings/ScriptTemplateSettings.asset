@@ -19,7 +19,6 @@ MonoBehaviour:
   - {fileID: 114380126654612652}
   - {fileID: 114364570387524256}
   - {fileID: 114141027725322898}
-  - {fileID: 0}
   processedFiles:
   - .cs
   - .js

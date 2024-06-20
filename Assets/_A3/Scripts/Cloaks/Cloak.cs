@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Com.KheruSEmporium.A3.A3.Cloaks {
+namespace Com.KheruSEmporium.A3 {
 
     [RequireComponent(typeof(Animator))]
     abstract public class Cloak : MonoBehaviour {

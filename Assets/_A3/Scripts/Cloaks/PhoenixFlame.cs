@@ -1,8 +1,7 @@
 using Com.KheruSEmporium.A3.A3.Cloaks;
 using UnityEngine;
 
-namespace Com.KheruSEmporium.A3
-{
+namespace Com.KheruSEmporium.A3.A3.Cloaks {
     public class PhoenixFlame : Cloak
     {
 		[SerializeField] private GameObject flameAttack = null;
@@ -11,9 +10,10 @@ namespace Com.KheruSEmporium.A3
 		public override void OnPhoenix() {
 			if (!CanAct) return;
 
-			Flame attack = GameObject.Instantiate(flameAttack, transform.position + player.HorizontalFacing * spawnDistance, Quaternion.identity)
+			Flame attack = GameObject.Instantiate(flameAttack, transform.position + player.HorizontalFacing.normalized * spawnDistance, Quaternion.identity)
 				.GetComponent<Flame>();
 
+			attack.transform.SetParent(player.transform);
 			attack.SetDirection(player.HorizontalFacing);
 			attack.SetIgnoreTag("Player");
 
