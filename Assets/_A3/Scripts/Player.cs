@@ -3,6 +3,7 @@ using Com.KheruSEmporium.A3.A3.Cloaks;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -16,19 +17,29 @@ public class Player : Damageable {
 	public bool HasCloak => cloak != null;
 	public CloakType CloakType => cloak.Type;
 
+	private float moveSpeed;
+
 
 	public event Action OnPlayerInteract;
 
 	private void Start() {
 		rigidBody = GetComponent<Rigidbody2D>();
+		moveSpeed = settings.MovementSpeed;
 
 		//temp
 		cloak?.SetPlayer(this);
 	}
 
+	public void SetMoving(bool canMove) {
+		moveSpeed = canMove ? settings.MovementSpeed : 0;
+
+	}
+
 	// Controls
+	public InputTransmitter onMove = new InputTransmitter();
 	public void OnMove(InputValue value) {
-		velocity = value.Get<Vector2>() * settings.MovementSpeed;
+		velocity = value.Get<Vector2>() * moveSpeed;
+		onMove?.Invoke(value);
 	}
 
 	public void OnInteract(InputValue value) {
@@ -100,3 +111,5 @@ public class Player : Damageable {
 		visual.SetVisual(assimilatedCloaks);
 	}
 }
+
+public class InputTransmitter : UnityEvent<InputValue> { }
