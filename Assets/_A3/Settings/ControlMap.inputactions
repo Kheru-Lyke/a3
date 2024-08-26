@@ -23,7 +23,7 @@
                 },
                 {
                     "name": "Stag",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "cfa9298d-2479-44c1-9aa4-c2e6fb2f2492",
                     "expectedControlType": "Button",
                     "processors": "",
