@@ -1,8 +1,10 @@
 using Com.KheruSEmporium.A3;
 using Com.KheruSEmporium.A3.A3.Cloaks;
+using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -16,19 +18,44 @@ public class Player : Damageable {
 	public bool HasCloak => cloak != null;
 	public CloakType CloakType => cloak.Type;
 
+	private float moveSpeed = 0;
+	private float MoveSpeed { get { return moveSpeed; } 
+		set {
+			float inputX = velocity.x / moveSpeed;
+
+			moveSpeed = value;
+
+			velocity.x = inputX * moveSpeed;
+		}
+	}
+
 
 	public event Action OnPlayerInteract;
 
 	private void Start() {
 		rigidBody = GetComponent<Rigidbody2D>();
+		moveSpeed = settings.MovementSpeed;
 
 		//temp
 		cloak?.SetPlayer(this);
 	}
 
+	public void SetMoving(bool canMove) {
+		MoveSpeed = canMove ? settings.MovementSpeed : 0;
+	}
+
+	public override void SetInvincible(float timeBeforeFalse = -1) {
+		base.SetInvincible(timeBeforeFalse);
+
+		visual.ShowInvincible(true);
+		DOTween.Sequence().AppendInterval(timeBeforeFalse).AppendCallback(delegate () { visual.ShowInvincible(false); });
+	}
+
 	// Controls
+	public InputTransmitter onMove = new InputTransmitter();
 	public void OnMove(InputValue value) {
-		velocity = value.Get<Vector2>() * settings.MovementSpeed;
+		velocity = value.Get<Vector2>() * MoveSpeed;
+		onMove?.Invoke(value);
 	}
 
 	public void OnInteract(InputValue value) {
@@ -42,10 +69,16 @@ public class Player : Damageable {
 		}
 	}
 
+	private bool isStagging = false;
+
 	public void OnStag(InputValue value) {
-		cloak?.OnStag();
-		foreach (Cloak item in assimilatedCloaks) {
-			item.OnStag();
+		bool stagging = value.Get<float>() > 0;
+
+		if (stagging != isStagging) {
+
+			if (stagging) isStagging = stagging;
+			else DOTween.Sequence().AppendInterval(settings.JumpGraceTime).AppendCallback(delegate () { isStagging=stagging; });
+
 		}
 	}
 
@@ -56,10 +89,21 @@ public class Player : Damageable {
 		}
 	}
 
+	private void UseCloaks() {
+		if (isStagging) {
+			cloak?.OnStag();
+
+			foreach (Cloak item in assimilatedCloaks) {
+				item.OnStag();
+			}
+		}
+	}
+
 	// Actions
 
 	protected void FixedUpdate() {
 		Move();
+		UseCloaks();
 	}
 
 	/// <summary>
@@ -71,6 +115,15 @@ public class Player : Damageable {
 		animator.SetFloat("Speed", Mathf.Abs(velocity.x));
 		if (velocity.x != 0) transform.localScale = new Vector3(velocity.x > 0 ? 1 : -1, 1, 1);
 		base.Move();
+	}
+
+	protected override void CheckGround() {
+		bool wasGrounded = IsGrounded;
+		base.CheckGround();
+
+		if (wasGrounded != IsGrounded) {
+			MoveSpeed = IsGrounded? settings.MovementSpeed : settings.AirSpeed;
+		}
 	}
 
 	public void SetCloak(Cloak cloak) {
@@ -100,3 +153,5 @@ public class Player : Damageable {
 		visual.SetVisual(assimilatedCloaks);
 	}
 }
+
+public class InputTransmitter : UnityEvent<InputValue> { }

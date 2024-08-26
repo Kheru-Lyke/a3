@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 3117864795755145628}
   - component: {fileID: 3117864795755145627}
   - component: {fileID: 3117864795755145626}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Interactable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3117864795841299090}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InteractBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}

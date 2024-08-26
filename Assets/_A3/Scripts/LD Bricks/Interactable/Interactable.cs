@@ -17,8 +17,10 @@ namespace Com.KheruSEmporium.A3 {
 		}
 
 		protected void OnTriggerEnter2D(Collider2D collision) {
-			player = collision.gameObject.GetComponent<Player>();
-			if (player) { 
+			Player collided = collision.gameObject.GetComponent<Player>();
+
+			if (collided) {
+				player = collided;
 				ShowCanInteract(true);
 				player.OnPlayerInteract += OnPlayerInteract;
 			}

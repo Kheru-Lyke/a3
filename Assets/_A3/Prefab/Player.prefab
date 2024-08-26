@@ -137,6 +137,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkGroundDistance: 1.2
+  ignoreLayers:
+    serializedVersion: 2
+    m_Bits: 40
+  baseGravity: 5
+  gravityAugment: 0.05
+  maxGravity: 8
   maxHealth: 10
   isInvincible: 0
   settings: {fileID: 11400000, guid: 1bfecf74f2556884186c2be207363307, type: 2}

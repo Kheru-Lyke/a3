@@ -25,5 +25,12 @@ namespace Com.KheruSEmporium.A3
 
             visual.color = bodyColor;
         }
+
+        public void ShowInvincible(bool isInvincible) {
+            Color newColor = visual.color;
+            newColor.a = isInvincible ? 0.5f : 1f;
+
+            visual.color = newColor;
+        }
     }
 }

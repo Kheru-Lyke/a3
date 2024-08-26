@@ -10,4 +10,9 @@ namespace Com.KheruSEmporium.A3
         public event Action onDoneReacting;
         public void React();
     }
+
+    public interface IConnector {
+        public void Connect(Player player);
+        public void Disconnect();
+    }
 }
