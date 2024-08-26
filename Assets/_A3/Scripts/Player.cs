@@ -1,5 +1,6 @@
 using Com.KheruSEmporium.A3;
 using Com.KheruSEmporium.A3.A3.Cloaks;
+using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,6 +34,13 @@ public class Player : Damageable {
 	public void SetMoving(bool canMove) {
 		moveSpeed = canMove ? settings.MovementSpeed : 0;
 
+	}
+
+	public override void SetInvincible(float timeBeforeFalse = -1) {
+		base.SetInvincible(timeBeforeFalse);
+
+		visual.ShowInvincible(true);
+		DOTween.Sequence().AppendInterval(timeBeforeFalse).AppendCallback(delegate () { visual.ShowInvincible(false); });
 	}
 
 	// Controls
