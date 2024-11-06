@@ -143,7 +143,7 @@ MonoBehaviour:
   baseGravity: 5
   gravityAugment: 0.05
   maxGravity: 8
-  maxHealth: 10
+  maxHealth: 1
   isInvincible: 0
   settings: {fileID: 11400000, guid: 1bfecf74f2556884186c2be207363307, type: 2}
   visual: {fileID: 6577899722645430453}

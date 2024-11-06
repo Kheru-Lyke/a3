@@ -13,8 +13,8 @@ namespace Com.KheruSEmporium.A3
         private float health;
         public event Action OnDeath;
 
-		private void Start() {
-            health = maxHealth;
+		protected virtual void Start() {
+            Health = maxHealth;
 		}
 
 		protected float Health { get { return health; }
@@ -34,7 +34,7 @@ namespace Com.KheruSEmporium.A3
         }
 
         public virtual void ChangeHealthBy(float value) {
-            if (!isInvincible) Health -= value;
+			if (!isInvincible) Health += value;
         }
 
         protected virtual void Die() {

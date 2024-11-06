@@ -32,12 +32,13 @@ public class Player : Damageable {
 
 	public event Action OnPlayerInteract;
 
-	private void Start() {
+	override protected void Start() {
 		rigidBody = GetComponent<Rigidbody2D>();
 		moveSpeed = settings.MovementSpeed;
 
 		//temp
 		cloak?.SetPlayer(this);
+		base.Start();
 	}
 
 	public void SetMoving(bool canMove) {
