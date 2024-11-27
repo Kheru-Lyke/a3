@@ -3229,6 +3229,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkGroundDistance: 1
+  ignoreLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  baseGravity: 5
+  gravityAugment: 0.3
+  maxGravity: 10
   moveSpeed: 5
   startPos: {fileID: 156652463}
   timeToReset: 1
@@ -5355,7 +5361,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.1
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000218e2156c192987e0b5d50dde7c30e2313ea26615d1efb5829beffbd
+  m_ApplyToSortingLayers: 00000000218e2156c192987e0b5d50dde7c30e2397f153eb13ea2661c1b5770fe98e781a5d1efb5829beffbd
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -6678,7 +6684,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.7
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000218e2156c192987e0b5d50dde7c30e2313ea26615d1efb5829beffbd
+  m_ApplyToSortingLayers: 00000000218e2156c192987e0b5d50dde7c30e2397f153eb13ea2661c1b5770fe98e781a5d1efb5829beffbd
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -6885,6 +6891,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkGroundDistance: 1
+  ignoreLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  baseGravity: 5
+  gravityAugment: 0.3
+  maxGravity: 10
   moveSpeed: 5
   startPos: {fileID: 1401420936}
   timeToReset: 1

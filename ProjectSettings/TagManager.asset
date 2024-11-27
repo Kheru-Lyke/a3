@@ -55,8 +55,17 @@ TagManager:
   - name: Game Layer
     uniqueID: 588170215
     locked: 0
+  - name: Player Back
+    uniqueID: 3948147095
+    locked: 0
   - name: Player
     uniqueID: 1629940243
+    locked: 0
+  - name: Player Front
+    uniqueID: 259503553
+    locked: 0
+  - name: Player Arm
+    uniqueID: 444108521
     locked: 0
   - name: Foreground
     uniqueID: 1492852317
