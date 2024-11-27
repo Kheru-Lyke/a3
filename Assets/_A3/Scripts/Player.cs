@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : Damageable {
@@ -35,6 +36,8 @@ public class Player : Damageable {
 	override protected void Start() {
 		rigidBody = GetComponent<Rigidbody2D>();
 		moveSpeed = settings.MovementSpeed;
+
+		SetSingleton();
 
 		//temp
 		cloak?.SetPlayer(this);
@@ -152,6 +155,14 @@ public class Player : Damageable {
 		SetCloak(null);
 
 		visual.SetVisual(assimilatedCloaks);
+	}
+
+	/// Singleton
+	static private Player instance;
+	static public Player Instance => instance;
+
+	private void SetSingleton() {
+		instance = this;
 	}
 }
 
